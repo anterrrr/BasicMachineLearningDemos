@@ -30,7 +30,7 @@ def PCA(data, k):
     return data_k_dim
 
 if __name__ == '__main__':
-    data = pandas.read_csv('./Iris.csv')  # 读取数据集
+    data = pandas.read_csv('./data/Iris.csv')  # 读取数据集
     column_1 = np.array(data.SepalLengthCm)
     column_2 = np.array(data.SepalWidthCm)
     column_3 = np.array(data.PetalLengthCm)
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     ax.w_xaxis.set_ticklabels([])
     ax.w_yaxis.set_ticklabels([])
     ax.w_zaxis.set_ticklabels([])
-    plt.suptitle('result')
+    plt.suptitle('SVM Result')
     plt.show()
 
     # 使用降维后的数据划分数据集,70%的训练数据,30%的测试数据
@@ -168,14 +168,3 @@ if __name__ == '__main__':
     print()
     print('经PCA降维后数据训练模型得到的混淆矩阵\n{}'.format(confusion))
     print()
-
-
-
-
-
-
-
-
-
-
-
